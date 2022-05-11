@@ -8,6 +8,8 @@ import Login from './Componentes/Login/Login';
 import { UserStorage } from './UserContext';
 import User from './Componentes/User/User';
 import ProtectedRoute from './Componentes/Helper/ProtectedRoute';
+import Photo from './Componentes/Photo/Photo';
+import UserProfile from './Componentes/User/UserProfile';
 
 const App = () => {
   return <div>
@@ -18,6 +20,8 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path='login/*' element={<Login />} />
       <Route path='conta/*' element={<ProtectedRoute><User/></ProtectedRoute>} />
+      <Route path='foto/:id' element={<Photo />} />
+      <Route path='perfil/:user' element={<UserProfile />} />
     </Routes>
     <Footer />
     </UserStorage>
